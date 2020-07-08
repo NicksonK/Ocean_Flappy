@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 3746855661834309343}
   - component: {fileID: 105491584}
   - component: {fileID: 114317551477116448}
+  - component: {fileID: 114787337433699388}
+  - component: {fileID: 114884294569442884}
   m_Layer: 0
   m_Name: noise
   m_TagString: Untagged
@@ -113,7 +115,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -180,5 +182,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c98a1c5c193c412f8c9c35991b4564c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 150
+  force: 200
   startPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &114787337433699388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3746855661834309342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bffb803807528476696f7f8412a939b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tiltSmoth: 1
+  downAngle: {x: 0, y: 0, z: 0}
+  upAngle: {x: 0, y: 0, z: 0}
+--- !u!114 &114884294569442884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3746855661834309342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a8ee761258fa482c802975c7a4c9479, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4171845032074873570}
   m_Layer: 0
   m_Name: finger (1)
-  m_TagString: Untagged
+  m_TagString: DeadZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 5980510476254318800}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: PointZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 7274084002638468030}
   m_Layer: 0
   m_Name: finger
-  m_TagString: Untagged
+  m_TagString: DeadZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

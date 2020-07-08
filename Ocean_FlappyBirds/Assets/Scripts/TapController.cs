@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class TapController : MonoBehaviour
 {
-    public float force = 150;
+    public float force = 200;
     public Vector3 startPosition;
 
     Rigidbody2D rig;
@@ -29,7 +29,10 @@ public class TapController : MonoBehaviour
 
             rig.AddForce(Vector2.up * force, ForceMode2D.Force);
 
+            GetComponent<SmothRotation>().upAnimation();
+
         }
         
     }
+
 }
