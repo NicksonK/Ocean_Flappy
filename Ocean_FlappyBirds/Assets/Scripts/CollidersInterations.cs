@@ -15,6 +15,19 @@ public class CollidersInterations : MonoBehaviour
         
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+
+        if (collision.gameObject.tag == "DeadZone")
+        {
+
+            Time.timeScale = 0;
+            rig.simulated = false;
+
+        }
+
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
@@ -24,14 +37,7 @@ public class CollidersInterations : MonoBehaviour
             Debug.Log("Point");
 
         }
-
-        if (collision.gameObject.tag == "DeadZone")
-        {
-            Debug.Log("dead");
-
-            rig.simulated = false;
-
-        }
+        
     }
 
 }
