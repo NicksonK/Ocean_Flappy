@@ -115,6 +115,7 @@ public class CanvasController : MonoBehaviour
         {
 
             Score.highScore = Score.score;
+            PlayerPrefs.SetInt("HighScore", Score.highScore);
 
         }
 
