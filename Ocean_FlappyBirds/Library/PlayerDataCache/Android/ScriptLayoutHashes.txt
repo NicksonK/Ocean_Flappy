@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-/Users/nicksonkley/Desktop/Ocean_Flappy/Ocean_FlappyBirds/Flappy_Candy.V0.0.1.apk
+/Users/nicksonkley/Desktop/Ocean_Flappy/Ocean_FlappyBirds/Flappy_Candy.V0.0.2.apk
 SceneListBegin?
 Assets/Scenes/SampleScene.unity
 SceneListEnd?

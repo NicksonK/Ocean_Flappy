@@ -44,6 +44,7 @@ public class TapController : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
 
+            GetComponent<AudioSource>().Play();
             rig.AddForce(Vector2.up * force, ForceMode2D.Force);
 
             GetComponent<SmothRotation>().upAnimation();
