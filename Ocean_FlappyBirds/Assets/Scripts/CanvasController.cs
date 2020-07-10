@@ -9,6 +9,7 @@ public class CanvasController : MonoBehaviour
 
     public delegate void canvasDelegate();
     public static event canvasDelegate gameStart;
+    public static bool onGame = false;
 
     enum CanvasState
     {
@@ -25,6 +26,7 @@ public class CanvasController : MonoBehaviour
     private void Awake()
     {
         Self = this;
+        setCanvasState(CanvasState.StartMenu);
     }
 
     private void OnDisable()
@@ -57,6 +59,8 @@ public class CanvasController : MonoBehaviour
         switch (state) {
 
             case CanvasState.StartMenu:
+
+                Time.timeScale = 0;
 
                 startMenuCanvas.SetActive(true);
                 prepareCanvas.SetActive(false);
@@ -104,6 +108,7 @@ public class CanvasController : MonoBehaviour
 
     void deadZoneCollider()
     {
+        onGame = false;
 
         Time.timeScale = 0;
         if (Score.score > Score.highScore)
@@ -112,7 +117,6 @@ public class CanvasController : MonoBehaviour
             Score.highScore = Score.score;
 
         }
-        Score.score = 0;
 
         setCanvasState(CanvasState.GameOver);
 
@@ -122,10 +126,17 @@ public class CanvasController : MonoBehaviour
     {
 
         //Remontar toda a cena
+        onGame = true;
+        Time.timeScale = 1;
 
         setCanvasState(CanvasState.OnGame);
 
 
+    }
+
+    public void reloadScene()
+    {
+        SceneManager.LoadScene(0);
     }
 
 }

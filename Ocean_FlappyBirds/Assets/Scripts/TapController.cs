@@ -6,6 +6,19 @@ using UnityEngine;
 
 public class TapController : MonoBehaviour
 {
+
+    private void OnEnable()
+    {
+        CanvasController.gameStart += setPlayerPosition;   
+    }
+
+    private void OnDisable()
+    {
+
+        CanvasController.gameStart -= setPlayerPosition;
+
+    }
+
     public float force = 200;
     public Vector3 startPosition;
 
@@ -26,6 +39,8 @@ public class TapController : MonoBehaviour
     void Update()
     {
 
+        if (!CanvasController.onGame) return;
+
         if (Input.GetMouseButtonDown(0))
         {
 
@@ -36,5 +51,15 @@ public class TapController : MonoBehaviour
         }
         
     }
+
+    void setPlayerPosition()
+    {
+
+        rig.velocity = Vector3.zero;
+        rig.transform.position = startPosition;
+        rig.simulated = true;
+
+    }
+
 
 }
