@@ -18,6 +18,7 @@ public class TapController : MonoBehaviour
         rig = GetComponent<Rigidbody2D>();
         rig.velocity = Vector3.zero;
         rig.transform.position = startPosition;
+        rig.simulated = false;
         
     }
 

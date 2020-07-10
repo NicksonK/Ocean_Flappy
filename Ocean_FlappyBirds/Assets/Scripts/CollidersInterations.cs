@@ -6,6 +6,9 @@ using UnityEngine;
 public class CollidersInterations : MonoBehaviour
 {
 
+    public delegate void ContactDelegate();
+    public static event ContactDelegate deadZoneCollider;
+
     Rigidbody2D rig;
 
     private void Start()
@@ -20,8 +23,7 @@ public class CollidersInterations : MonoBehaviour
 
         if (collision.gameObject.tag == "DeadZone")
         {
-
-            Time.timeScale = 0;
+            deadZoneCollider();
             rig.simulated = false;
 
         }
